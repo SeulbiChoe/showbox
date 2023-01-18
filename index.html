@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼박스</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script><!-- Swiper CDN -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/><!-- Swiper CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <nav>
+                <div class="top-nav">
+                    <h1><a href="#"><img src="img/logo.png" alt=""></a></h1>
+                    <button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="nav-gnb">
+                    <button class="close-btn">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="gnb-list">
+                        <ul>
+                            <li><a href="#">SHOWBOX MOVIE</a></li>
+                            <li><a href="#" class="ko">현재 상영작</a></li>
+                            <li><a href="#" class="ko">쇼박스 라인업</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">COMPANY</a></li>
+                            <li><a href="#">ABOUT SHOWBOX</a></li>
+                            <li><a href="#">HISTORY</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">IR</a></li>
+                            <li><a href="#">NOTICE</a></li>
+                            <li><a href="#">RECRUIT</a></li>
+                        </ul>
+                    </div>
+
+                    <footer>
+                        <div class="top">
+                            <div><a href="https://www.youtube.com/@SHOWBOXmovie"><i class="fa-brands fa-youtube"></i></a></div>
+                            <div><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+                            <div><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+                            <div><a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
+                        </div>
+                        <div class="btm">
+                            <a href="#">개인정보처리방침</a>
+                            <span>COPYRIGHTⓒALL RIGHTS RESERVED</span>
+                        </div>
+                    </footer>
+                </div>
+            </nav>
+        </header>
+
+        <div class="main">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide video">
+                        <iframe
+                        src="https://www.youtube.com/embed/y-sqDi4cgdI?controls=0&autoplay=1&mute=1&loop=1&playlist=y-sqDi4cgdI" 
+                        frameborder="0"
+                        allow="autoplay;mute" 
+                        allowfullscreen="1">
+                        </iframe>
+                        <div class="title">
+                            <h2>사도</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide video">
+                        <iframe
+                        src="https://www.youtube.com/embed/f_RSLjVXFo8?controls=0&autoplay=1&mute=1&loop=1&playlist=f_RSLjVXFo8" 
+                        frameborder="0" 
+                        allow="autoplay;mute" 
+                        allowfullscreen="1">
+                        </iframe>
+                        <div class="title">
+                            <h2>택시운전사</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide video">
+                        <iframe
+                        src="https://www.youtube.com/embed/z82AfnzyFh0?controls=0&autoplay=1&mute=1&loop=1&playlist=z82AfnzyFh0" 
+                        frameborder="0" 
+                        allow="autoplay;mute" 
+                        allowfullscreen="1">
+                        </iframe>
+                        <div class="title">
+                            <h2>암살</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide video">
+                        <iframe
+                        src="https://www.youtube.com/embed/Iu-BTi-NFTk?controls=0&autoplay=1&mute=1&loop=1&playlist=Iu-BTi-NFTk" 
+                        frameborder="0" 
+                        allow="autoplay;mute" 
+                        allowfullscreen="1">
+                        </iframe>
+                        <div class="title">
+                            <h2>암수살인</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <script>
+                var swiper = new Swiper(".main .swiper", {
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                  loop: true,
+                  pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                  }
+                });
+            </script>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.top-nav button').click(function(){
+                $('#header .nav-gnb').fadeIn(300);
+                // $('#header .nav-gnb').addClass('flex');
+            });
+            $('#header .nav-gnb .close-btn').click(function(){
+                $('#header .nav-gnb').fadeOut(300);
+                // $('#header .nav-gnb').removeClass('flex');
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'MonoplexKRWide-BoldItalic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-wide@1.0/MonoplexKRWide-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    /* letter-spacing: -0.5px; */
+    box-sizing: border-box;
+}
+button {
+    cursor: pointer;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+#wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.ko {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 1em !important;
+}
+.swiper-button-prev::after, .swiper-button-next::after {
+    display: none;
+}
+/* 헤더 */
+#header {
+    width: 100%;
+    height: 5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+#header nav {
+    width: 100%;
+    height: 100%;
+}
+#header .top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 18px;
+}
+#header .top-nav h1 a {
+    display: block;
+    height: 100%;
+}
+#header .top-nav h1 a img {
+    vertical-align: middle;
+    width: 80%;
+}
+#header .top-nav button {
+    width: 22px;
+    height: 12px;
+    border: 0;
+    position: relative;
+    background-color: transparent;
+}
+#header .top-nav button span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#header .top-nav button span:nth-child(2) {
+    top: 50%;
+}
+#header .top-nav button span:nth-child(3) {
+    top: 100%;
+}
+#header .nav-gnb {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#header .nav-gnb .close-btn {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    border: 0;
+    top: 20px;
+    left: calc(100% - 38px);
+    background-color: transparent;
+    margin-bottom: 50px;
+}
+#header .nav-gnb .close-btn span {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+#header .nav-gnb .close-btn span:nth-child(1) {
+    transform: rotate(45deg);
+}
+#header .nav-gnb .close-btn span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+#header .nav-gnb ul {
+    padding-left: 20px;
+    margin-top: 30px;
+}
+#header .nav-gnb ul li a {
+    text-decoration: none;
+    display: inline-block;
+}
+#header .nav-gnb ul > li {
+    position: relative;
+}
+#header .nav-gnb ul > li:nth-child(1)::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    background-color: #eee;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+#header .nav-gnb ul > li:nth-child(1) a {
+    font-size: 1.4em;
+    color: #fff;
+    font-weight: 900;
+    position: relative;
+    background-color: #000;
+    z-index: 2;
+    padding-right: 15px;
+    letter-spacing: 0.5px;
+}
+#header .nav-gnb ul > li:nth-child(2) {
+    margin-top: 5px;
+}
+#header .nav-gnb ul > li:not(:nth-child(1)) a {
+    color: #959595;
+    padding: 5px 0;
+    font-size: 1.1em;
+}
+#header .nav-gnb footer {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    background-color: #222;
+    padding: 20px 0;
+}
+#header .nav-gnb footer .top {
+    display: flex;
+    width: 60%;
+    max-width: 170px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+#header .nav-gnb footer .top a {
+    background-color: #000;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+#header .nav-gnb footer .top i {
+    font-size: 1em;
+    color: #777;
+}
+#header .nav-gnb footer .btm {
+    width: 80%;
+    margin: 10px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#header .nav-gnb footer .btm a,
+#header .nav-gnb footer .btm span {
+    color: #fff;
+    font-size: 0.8em;
+    padding: 10px 3px;
+}
+#header .nav-gnb .gnb-list ul li:not(:nth-child(1)):hover a {
+    text-decoration: underline;
+}
+/* 인덱스 메인 */
+.main .video {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.main .video iframe {
+    width: 2560px;
+    height: 1440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    pointer-events: none;
+}
+.main .swiper .swiper-pagination {
+    bottom: 20px;
+}
+.main .swiper-pagination,
+.main .swiper-pagination span {
+    color: #fff;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+.main .swiper .swiper-button-next {
+    width: 0;
+    height: 0;
+    display: block;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-left: 5px solid #fff;
+    border-right: 5px solid transparent;
+}
+.main .swiper .swiper-button-prev {
+    width: 0;
+    height: 0;
+    display: block;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid #fff;
+}
+.main .swiper .swiper-button-next::before {
+    content: 'NEXT';
+    display: inline-block;
+    position: absolute;
+    right: 14px;
+    top: -9px;
+    color: #fff;
+    font-weight: 300;
+}
+.main .swiper .swiper-button-prev::before {
+    content: 'PREV';
+    display: inline-block;
+    position: absolute;
+    left: 14px;
+    top: -9px;
+    color: #fff;
+    font-weight: 300;
+}
+.main .video .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 45px;
+    z-index: 9999;
+    color: #fff;
+}
+.main .video .title h2 {
+    font-family: 'MonoplexKRWide-BoldItalic';
+    font-size: 1.5em;
+    letter-spacing: 1.5px;
+}
+
+@media (min-width: 768px) {
+    .main .video .title h2 {
+        font-size: 2.5em;
+    }
+}
+@media (min-width: 1024px) {
+    #header {
+        height: 7em;
+    }
+    #header .top-nav {
+        padding: 0 50px;
+    }
+    #header .top-nav h1 a img {
+        vertical-align: middle;
+        width: 100%;
+    }
+    #header .nav-gnb .close-btn {
+        top: 36px;
+        left: calc(100% - 72px);
+    }
+    #header .nav-gnb footer {
+        display: none;
+    }
+    #header .nav-gnb .gnb-list {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+    }
+    #header .nav-gnb ul > li:nth-child(1) a {
+        padding: 0 15px;
+    }
+    #header .nav-gnb ul > li:not(:nth-child(1)) a {
+        padding: 5px 15px;
+        font-size: 1.15em;
+    }
+    #header .nav-gnb ul > li:nth-child(1)::after {
+        right: auto;
+        height: 1px;
+    }
+    #header .nav-gnb ul > li:not(:nth-child(1)) a {
+        letter-spacing: -0.5px;
+    }
+    #header .nav-gnb .gnb-list > ul:nth-child(1) {
+        padding-left: 0;
+    }
+    #header .nav-gnb .gnb-list > ul:nth-child(1) a {
+        padding-left: 0;
+    }
+    #header .nav-gnb .gnb-list > ul:not(:nth-child(1)) a {
+        padding-left: 15px;
+    } 
+    #header .nav-gnb .gnb-list ul {
+        margin-right: 80px;
+    }
+    #header .nav-gnb .gnb-list ul li:nth-child(2) {
+        margin-top: 10px;
+    }
+    #header .nav-gnb ul > li:not(:nth-child(1)) a {
+        padding: 8px 0;
+    }
+    #header .nav-gnb ul > li:nth-child(1) a {
+        font-size: 2em;
+    }
+    /* #header .nav-gnb.flex {
+        display: flex;
+    } */
+}
