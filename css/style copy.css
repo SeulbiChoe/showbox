@@ -1,0 +1,83 @@
+
+/* 인덱스 메인 */
+
+
+.main .swiper-pagination,
+.main .swiper-pagination span {
+    color: #fff;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .main .video .title h2 {
+        font-size: 2.5em;
+    }
+}
+@media (min-width: 1024px) {
+
+    #header .top-nav-mb h1 a img {
+        vertical-align: middle;
+        width: 100%;
+    }
+    #header .nav-gnb .close-btn {
+        top: 36px;
+        left: calc(100% - 72px);
+    }
+    #header .nav-gnb footer {
+        display: none;
+    }
+    #header .nav-gnb .gnb-list {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+    }
+    #header .nav-gnb ul > li:nth-child(1) a {
+        padding: 0 15px;
+    }
+    #header .nav-gnb ul > li:not(:nth-child(1)) a {
+        padding: 5px 15px;
+        font-size: 1.15em;
+    }
+    #header .nav-gnb ul > li:nth-child(1)::after {
+        right: auto;
+        height: 1px;
+    }
+    #header .nav-gnb ul > li:not(:nth-child(1)) a {
+        letter-spacing: -0.5px;
+    }
+    #header .nav-gnb .gnb-list > ul:nth-child(1) {
+        padding-left: 0;
+    }
+    #header .nav-gnb .gnb-list > ul:nth-child(1) a {
+        padding-left: 0;
+    }
+    #header .nav-gnb .gnb-list > ul:not(:nth-child(1)) a {
+        padding-left: 15px;
+    } 
+    #header .nav-gnb .gnb-list ul {
+        margin-right: 80px;
+    }
+    #header .nav-gnb .gnb-list ul li:nth-child(2) {
+        margin-top: 10px;
+    }
+    #header .nav-gnb ul > li:not(:nth-child(1)) a {
+        padding: 8px 0;
+    }
+    #header .nav-gnb ul > li:nth-child(1) a {
+        font-size: 2em;
+    }
+    /* #header .nav-gnb.flex {
+        display: flex;
+    } */
+}
