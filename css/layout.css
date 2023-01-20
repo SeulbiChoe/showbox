@@ -164,6 +164,11 @@ img {
     #header .open-btn {
         margin-left: 20px;
     }
+    #header .nav-gnb {
+        width: 100%;
+        height: 100vh;
+        overflow-y: hidden;
+    }
     #header .nav-gnb .top {
         height: 7em;
         padding: 0 50px;
@@ -174,7 +179,7 @@ img {
     #header footer {
         display: none;
     }
-    #header .nav-gnb .gnb-list {
+    #header .nav-gnb .gnb-list .inner {
         width: auto;
         margin: 0 auto;
         display: flex;
