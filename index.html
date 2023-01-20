@@ -48,25 +48,56 @@
                         </button>
                     </div>
                     <div class="gnb-list">
-                        <ul>
-                            <li class="menu-title"><a href="#">SHOWBOX MOVIE</a></li>
-                            <li><a href="#" class="ko">현재 상영작</a></li>
-                            <li><a href="#" class="ko">쇼박스 라인업</a></li>
-                        </ul>
-                        <ul>
-                            <li class="menu-title"><a href="#">COMPANY</a></li>
-                            <li><a href="#">ABOUT SHOWBOX</a></li>
-                            <li><a href="#">HISTORY</a></li>
-                            <li><a href="#">CONTACT</a></li>
-                        </ul>
-                        <ul>
-                            <li class="menu-title"><a href="#">IR</a></li>
-                            <li><a href="#">NOTICE</a></li>
-                            <li><a href="#">RECRUIT</a></li>
-                        </ul>
-                    </div>
+                        <div class="inner">
+                            <ul>
+                                <li class="menu-title"><a href="#">SHOWBOX MOVIE</a></li>
+                                <li><a href="#" class="ko">현재 상영작</a></li>
+                                <li><a href="#" class="ko">쇼박스 라인업</a></li>
+                            </ul>
+                            <ul>
+                                <li class="menu-title"><a href="#">COMPANY</a></li>
+                                <li><a href="#">ABOUT SHOWBOX</a></li>
+                                <li><a href="#">HISTORY</a></li>
+                                <li><a href="#">CONTACT</a></li>
+                            </ul>
+                            <ul>
+                                <li class="menu-title"><a href="#">IR</a></li>
+                                <li><a href="#">NOTICE</a></li>
+                                <li><a href="#">RECRUIT</a></li>
+                            </ul>
 
-                    <footer>
+                            <!-- <footer>
+                                <div class="top">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/@SHOWBOXmovie" target='_blank'></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="btm">
+                                    <a href="#">개인정보처리방침</a>
+                                    <span>COPYRIGHTⓒALL RIGHTS RESERVED</span>
+                                </div>
+                            </footer> -->
+
+                        </div>
+                        <footer>
+                            <div class="top">
+                                <ul>
+                                    <li><a href="https://www.youtube.com/@SHOWBOXmovie" target='_blank'></a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </div>
+                            <div class="btm">
+                                <a href="#">개인정보처리방침</a>
+                                <span>COPYRIGHTⓒALL RIGHTS RESERVED</span>
+                            </div>
+                        </footer>
+                    </div>
+                    <!-- <footer>
                         <div class="top">
                             <ul>
                                 <li><a href="https://www.youtube.com/@SHOWBOXmovie" target='_blank'></a></li>
@@ -79,7 +110,7 @@
                             <a href="#">개인정보처리방침</a>
                             <span>COPYRIGHTⓒALL RIGHTS RESERVED</span>
                         </div>
-                    </footer>
+                    </footer> -->
                 </div>
             </nav>
         </header>
@@ -163,6 +194,11 @@
             });
         });
 
+        const setVh = () => {
+            document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
+        };
+        window.addEventListener('resize', setVh);
+        setVh();
     </script>
 </body>
 </html>
