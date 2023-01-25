@@ -4,3 +4,15 @@ li {
 .gnb-top {
     display: flex;
 }
+.dt-gnb .gnb-menu ul {
+    display: flex;
+}
+.dt-gnb .gnb-menu .gnb-menu-center li {
+    margin: 0 20px;
+}
+.dt-gnb .gnb-menu .gnb-menu-right li {
+    margin: 0 10px;
+}
+.dt-gnb .gnb-menu .gnb-menu-right li:last-child {
+    margin-right: 0;
+}

@@ -27,6 +27,12 @@ body {
     width: 100%;
     height: 4.5em;
     background-color: antiquewhite;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#header .dt-gnb {
+    display: none;
 }
 #header .mb-gnb .gnb-top {
     width: 100%;
@@ -74,9 +80,31 @@ body {
 #header .mb-gnb .gnb-menu .close-btn a {
     display: block;
     text-align: end;
-
+}
+.main {
+    width: 100%;
+    background-color: pink;
+}
+.mb-gnb .gnb-menu .toggle-menu {
+    display: none;
 }
 @media (min-width: 992px) {
-
-    
+    #header {
+        height: 5.5em;
+        background-color: tan;
+    }
+    #header .mb-gnb {
+        display: none;
+    }
+    #header .dt-gnb {
+        display: block;
+    }
+    #header .dt-gnb .gnb-menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    .dt-gnb .gnb-menu a {
+        line-height: 5.5em;
+    }
 }
