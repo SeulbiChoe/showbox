@@ -2,226 +2,81 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 14px;
-    font-family: 'Lato', sans-serif;
+    font-size: 15px;
     box-sizing: border-box;
-    letter-spacing: -0.5px;
 }
+html,
 body {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-}
-button {
-    cursor: pointer;
+    height: calc(var(--vh, 1vh) * 100);
 }
 #wrap {
     width: 100%;
     height: 100%;
-    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    background-color: aliceblue;
 }
-img {
-    object-fit: cover;
-    vertical-align: middle;
+#skip-menu {
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    left: -100%;
 }
-/* 헤더 */
 #header {
     width: 100%;
-    height: 5em;
-    position: fixed;
-    top: 0;
+    height: 4.5em;
+    background-color: antiquewhite;
+}
+#header .mb-gnb .gnb-top {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+}
+#header .mb-gnb .gnb-top a {
+    line-height: 4.5em;
+}
+#header .mb-gnb .gnb-top .gnb-top-right {
+    margin-left: auto;
+}
+#header .mb-gnb .gnb-menu {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: rgba(0,0,0,0.5);
+    position: relative;
     left: 0;
-    z-index: 9999;
-}
-#header ul li {
-    list-style: none;
-}
-#header a {
-    text-decoration: none;
-}
-#header nav {
-    width: 100%;
-    height: 100%;
-}
-#header .top-nav-mb {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    padding: 0 18px;
-}
-#header .top-nav-dt {
+    top: -4.5em;
     display: none;
 }
-#header .logo a {
-    display: block;
+#header .mb-gnb .gnb-menu .gnb-menu-top {
+    position: absolute;
+    width: 80%;
     height: 100%;
-}
-#header .open-btn {
-    width: 23px;
-    height: 10px;
-    border: 0;
-    position: relative;
-    background-color: transparent;
-}
-#header .nav-gnb {
-    width: 100%;
-    height: calc(var(--var, 1vh) * 100);
-    min-height: 100%;
+    right: 0;
+    top: 0;
+    padding: 0 15px;
+    background-color: coral;
     overflow-y: scroll;
-    overflow-x: hidden;
-    background-color: #000;
+}
+#header .mb-gnb .gnb-menu .gnb-menu-btm {
     position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
+    width: 80%;
+    height: 3em;
+    right: 0;
+    bottom: 0;
+    background-color: turquoise;
 }
-#header .nav-gnb > .top {
+#header .mb-gnb .gnb-menu .close-btn {
     width: 100%;
-    height: 5em;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding: 0 18px;
-    margin-bottom: 20px;
+    line-height: 4.5em;
+    background-color: tan;
 }
-#header .nav-gnb .close-btn {
-    width: 23px;
-    height: 23px;
-    border: 0;
-    background-color: transparent;
-    position: relative;
-}
-#header .nav-gnb .gnb-list {
-    display: flex;
-    width: 100%;
-    height: 90%;
-    flex-direction: column;
-}
-#header .nav-gnb .gnb-list .inner {
-    padding-left: 25px;
-}
-#header .nav-gnb .gnb-list .menu-title {
-    width: 100%;
-    position: relative;
-}
-#header .nav-gnb .gnb-list ul {
-    margin-bottom: 35px;
-}
-#header .nav-gnb .gnb-list ul li {
-    padding: 5px 0;
-}
-#header footer {
-    width: 100%;
-    background-color: #242426;
-    /* position: absolute;
-    bottom: 0; */
-    padding: 25px 0;
-    margin-top: auto;
-}
-#header footer .top ul {
-    display: flex;
-    max-width: 180px;
-    margin: 0 auto;
-    justify-content: space-between;
-}
-#header footer .btm {
-    margin-top: 10px;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-@media (min-width: 1024px) {
-    #header {
-        height: 7em;
-    }
-    #header .top-nav-mb {
-        display: none;
-    }
-    #header .top-nav-dt {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        padding: 0 50px;
-        align-items: center;
-        position: relative;
-        z-index: 9999;
-    }
-    #header .top-nav-dt .links {
-        display: flex;
-        margin-left: auto;
-    }
-    #header .top-nav-dt .links li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        margin: 0 20px;
-    }
-    #header .open-btn {
-        margin-left: 20px;
-    }
-    #header .nav-gnb {
-        width: 100%;
-        height: 100vh;
-        overflow-y: hidden;
-    }
-    #header .nav-gnb .top {
-        height: 7em;
-        padding: 0 50px;
-    }
-    #header .nav-gnb .close-btn {
-        display: none;
-    }
-    #header footer {
-        display: none;
-    }
-    #header .nav-gnb .gnb-list .inner {
-        width: auto;
-        margin: 0 auto;
-        display: flex;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    #header .nav-gnb .gnb-list ul:not(:last-child) {
-        padding-right: 150px;
-    }
-    #header .nav-gnb .gnb-list > ul > li:nth-child(2) {
-        margin-top: 10px;
-    }
-}
+#header .mb-gnb .gnb-menu .close-btn a {
+    display: block;
+    text-align: end;
 
-/* 인덱스 메인 */
-.main .video {
-    width: 100%;
-    height: calc(var(--var, 1vh) * 100);
-    position: relative;
-    overflow: hidden;
 }
-.main .video iframe {
-    width: 2560px;
-    height: 1440px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    pointer-events: none;
-}
-.main .swiper .swiper-pagination {
-    bottom: 20px;
-}
-.main .video .title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 45px;
-    z-index: 9999;
-    color: #fff;
-    text-align: center;
+@media (min-width: 992px) {
+
+    
 }
