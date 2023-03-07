@@ -1,0 +1,7 @@
+body.nonScroll {
+    overflow: hidden;
+}
+
+.mb-nav-top.scroll {
+    background-color: #120d3c;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGABOX</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> <!-- Swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/> <!-- Swiper CDN -->
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/active.css">
+</head>
+<body>
+    <div id="wrap">
+        
+        <!-- 팝업 시작-->
+        <div class="popup">
+            <div class="inner">
+                <div class="popup_close-btn">
+                    <button><img src="img/ico_main_popup_close.png" alt=""><span>닫기</span></button>
+                </div>
+                <div class="popup_content">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#"><img src="img/popup_img_01.jpg" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="img/popup_img_02.jpg" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="img/popup_img_03.jpg" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="img/popup_img_04.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="img/popup_img_05.jpg" alt=""></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="none-show">
+                        <input type="checkbox">
+                        <label for="checkbox"></label>
+                        하루동안 보지않기
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 팝업 끝-->
+
+        <header>11</header>
+
+
+    </div>
+    <script src="js/swiper.js"></script>
+    <script type="text/javascript">
+        // 모바일에서 100vh 설정
+        function setScreenSize() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        setScreenSize();
+
+
+        $(document).ready(function(){
+            $('body').addClass('nonScroll');
+           
+            //스크롤 하면 Mobile Nav 백그라운드 색상 변화
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                if (scroll > 1) {
+                    $('.mb-nav-top').addClass('scroll');
+                }
+                else if (scroll == 0) {
+                    $('.mb-nav-top').removeClass('scroll');
+                }
+            });
+
+        });
+        $('.popup .popup_close-btn').click(function(){
+            $('.popup').hide();
+            $('body').removeClass('nonScroll');
+        })
+    </script>
+</body>
+</html>
