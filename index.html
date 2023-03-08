@@ -16,7 +16,7 @@
     <div id="wrap">
         
         <!-- 팝업 시작-->
-        <div class="popup">
+        <!-- <div class="popup">
             <div class="inner">
                 <div class="popup_close-btn">
                     <button><img src="img/ico_main_popup_close.png" alt=""><span>닫기</span></button>
@@ -39,11 +39,144 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- 팝업 끝-->
 
-        <header>11</header>
 
+        <!-- 헤더 시작 -->
+        <header>
+
+            <!-- 모바일 NAV -->
+            <nav>
+                <!-- 모바일 TOP NAV -->
+                <div class="mb-nav-top">
+                    <h1><a href="index.html"></a></h1>
+                    <div class="ticket"><a href="#"></a></div>
+                    <div class="alarm"><a href="#"></a></div>
+                    <div class="menu-btn"><a href="#"></a></div>
+                </div>
+                <!-- 모바일 BTM NAV -->
+
+                <div class="mb-nav-btm">
+                    <ul>
+                        <li class="gnb1 gnb-active">
+                            <a href="#">
+                                <span>홈</span>
+                            </a>
+                        </li>
+                        <li class="gnb2">
+                            <a href="#">
+                                <span>스토어</span>
+                            </a>
+                        </li>
+                        <li class="gnb3">
+                            <a href="#">
+                                <span>예매</span>
+                            </a>
+                        </li>
+                        <li class="gnb4">
+                            <a href="#">
+                                <span>이벤트</span>
+                            </a>
+                        </li>
+                        <li class="gnb5">
+                            <a href="#">
+                                <span>MY</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 모바일 OPEN MENU -->
+
+                <div class="mb-open-menu">
+                    <!-- TOP -->
+                    <div class="top">
+                        <div>로그인 해주세요 :)</div>
+                        <div class="setting"><a href="#"></a></div>
+                        <div class="menu_close-btn"><a href="#"></a></div>
+                    </div>
+                    <!-- CENTER -->
+                    <div class="center">
+                        <div class="left">
+                            <a class="login" href="#">로그인</a>
+                            <a class="join" href="#">회원가입</a>
+                        </div>
+                        <div class="right"><a href="#">비회원 예매확인</a></div>
+                    </div>
+                    <!-- BOTTOM -->
+                    <div class="btm">
+                        <div class="inner">
+                            <div>
+                                <span>QUICK MENU</span>
+                                <a onclick="allMenu()" href="#">전체메뉴 보기</a>
+                            </div>
+                            <div class="menu">
+                                <ul class="rnb">
+                                    <li class="menu1"><a href="#"><span></span></a></li>
+                                    <li class="menu2"><a href="#"><span></span></a></li>
+                                    <li class="menu3"><a href="#"><span></span></a></li>
+                                    <li class="menu4"><a href="#"><span></span></a></li>
+                                    <li class="menu5"><a href="#"><span></span></a></li>
+                                    <li class="menu6"><a href="#"><span></span></a></li>
+                                    <li class="menu7"><a href="#"><span></span></a></li>
+                                </ul>
+                                <div>
+                                    <ul class="all-rnb">
+                                        <li><a href="#">전체영화</a></li>
+                                        <li><a href="#">나의 메가박스</a></li>
+                                        <li><a href="#">스토어</a></li>
+                                        <li><a href="#">극장안내</a></li>
+                                        <li><a href="#">무비피드</a></li>
+                                        <li><a href="#">무비포스트</a></li>
+                                        <li><a href="#">스페셜 멤버십</a></li>
+                                        <li><a href="#">멤버십 안내</a></li>
+                                        <li><a href="#">VIP 라운지</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="notice">
+                                <a href="#">
+                                    <div>
+                                        <span class="img"></span>
+                                        <span>[공지][시스템점검] 메가박스 시스템 점검 안내 (3/14)</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <div class="sns">
+                                    <ul>
+                                        <li class="facebook"><a href="#"></a></li>
+                                        <li class="youtube"><a href="#"></a></li>
+                                        <li class="insta"><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <a href="#">알림</a>
+                                    <a href="#">고객센터</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </nav>
+
+            <!-- 데스크탑 NAV -->
+            <nav>
+
+            </nav>
+
+        </header>
+        <!-- 헤더 끝 -->
+
+
+        <!-- 모바일에만 있는 탑 스몰 슬라이더 -->
+        <div class="top-sm-slider">
+            <div class="inner">
+
+            </div>
+        </div>
 
     </div>
     <script src="js/swiper.js"></script>
@@ -74,7 +207,17 @@
         $('.popup .popup_close-btn').click(function(){
             $('.popup').hide();
             $('body').removeClass('nonScroll');
+        });
+
+        $('.menu-btn').click(function(){
+            $('.mb-open-menu').show();
+        });
+        $('.menu_close-btn').click(function(){
+            $('.mb-open-menu').hide();
         })
+        function allMenu () {
+            $('.mb-open-menu .btm .inner .menu > div').slideToggle();
+        }
     </script>
 </body>
 </html>
