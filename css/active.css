@@ -1,0 +1,34 @@
+body.nonScroll {
+    overflow: hidden;
+}
+.top-nav.scroll {
+    background-color: #120d3c;
+}
+/* jQuery로 slidetoggle 이용 */
+header .mobile .open-menu .inner .main .content .all-menu {
+    display: none;
+}
+header .mobile .open-menu .inner .main .content .quick-menu .title > a span.active {
+    transform: translate(-2px, 1px) rotate(225deg);
+}
+header .mobile .open-menu {
+    display: none;
+}
+/* 하단 NAV 현페이지 활성화 */
+.gnb-active a::after {
+    color: #14b9cb !important;
+}
+.mb-contents .txt-slide .swiper-slide.active a {
+    color: #120d3c;
+    font-weight: 500;
+    position: relative;
+}
+.mb-contents .txt-slide .swiper-slide.active a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #120d3c;
+    bottom: -2px;
+    left: 0;
+}

@@ -1,0 +1,305 @@
+/* style.css에 넣기 */
+.popup .swiper-pagination-bullet-active {
+    background-color: #14b9cb !important;
+}
+/* 팝업창 체크박스 custom */
+.popup .content .none-show {
+    color: #bbb;
+}
+/* 기본 checkbox */ .popup .content .none-show .checkbox_custom {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 110px;
+    position: absolute;
+    top: 0;
+} 
+.popup .content .none-show .checkbox_custom::after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 3px;
+    opacity: 0;
+    position: absolute;
+    top: 2px;
+    transform: rotate(-45deg);
+    width: 8px;
+}
+.popup .content .none-show input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    transform: translate(-20px, 3px);
+    z-index: 99;
+}
+.popup .content .none-show input[type="checkbox"]:checked + .checkbox_custom {
+    background-color: #451485;
+    border-color: #451485;
+}
+.popup .content .none-show input[type="checkbox"]:checked + .checkbox_custom::after {
+    opacity: 1;
+}
+.popup .container .inner .popup_close-btn a {
+    color: #fff;
+}
+.popup .container .inner .popup_close-btn a span {
+    background: url(../img/ico_main_popup_close.png) no-repeat center;
+    background-size: contain;
+}
+/***************** 모바일 헤더 *****************/
+header .mobile .open-menu .inner .mid > div > a:last-child::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #aaa;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header .mobile .open-menu .inner .main .content .quick-menu .title > span {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+} 
+header .mobile .open-menu .inner .main .content .quick-menu .title > a {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+header .mobile .open-menu .inner .main .content .quick-menu .title > a span {
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    margin-left: 8px;
+    transform: translate(-2px, -1px) rotate(45deg);
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list1 span {
+    background: url(../img/rnb_ic_black_movie.png) no-repeat center;
+    background-size: 65%;
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list2 span {
+    background: url(../img/rnb_ic_black_theater.png) no-repeat center;
+    background-size: 65%;
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list3 span {
+    background: url(../img/rnb_ic_black_special.png) no-repeat center;
+    background-size: 65%;
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list4 span {
+    background: url(../img/rnb_ic_private.png) no-repeat center;
+    background-size: 65%;
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list5 span {
+    background: url(../img/rnb_ic_event.png) no-repeat center;
+    background-size: 65%;
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list6 span {
+    background: url(../img/rnb_ic_sale.png) no-repeat center;
+    background-size: 65%;
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list7 span {
+    background: url(../img/rnb_ic_channeltalk.png) no-repeat center;
+    background-size: 65%;
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list li span::after {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list1 span::after {
+    content: '영화별 예매';
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list2 span::after {
+    content: '극장별 예매';
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list3 span::after {
+    content: '특별관 예매';
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list4 span::after {
+    content: '더 부티크 프라이빗';
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list5 span::after {
+    content: '이벤트';
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list6 span::after {
+    content: '제휴/할인';
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list .list7 span::after {
+    content: '상담톡';
+}
+header .mobile .open-menu .inner .main .content .all-menu ul li::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #ddd;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+}
+header .mobile .open-menu .notice a::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: 10px;
+    background: url(../img/ico-rnb-notice.png) no-repeat center;
+    background-size: contain;
+}
+header .mobile .open-menu .main .btm .sns .facebook {
+    background: url(../img/sns_ic_facebook.png) no-repeat center;
+    background-size: contain;
+}
+header .mobile .open-menu .main .btm .sns .youtube {
+    background: url(../img/sns_ic_youtube.png) no-repeat center;
+    background-size: contain;
+}
+header .mobile .open-menu .main .btm .sns .insta {
+    background: url(../img/sns_ic_insta.png) no-repeat center;
+    background-size: contain;
+}
+header .mobile .open-menu .main .btm .right a {
+    font-size: 13px;
+}
+header .mobile .open-menu .main .btm .right a:last-child {
+    margin-left: 7px;
+    position: relative;
+}
+header .mobile .open-menu .main .btm .right a:last-child::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    background-color: #aaa;
+    top: 55%;
+    transform: translateY(-50%);
+    left: -5px;
+}
+header .mobile .open-menu .inner .top .setting {
+    background: url(../img/ic_set.png) no-repeat center;
+    background-size: contain;
+}
+header .mobile .open-menu .inner .top .menu_close-btn {
+    background: url(../img/ic_close_top.png) no-repeat center;
+    background-size: contain;
+}
+header .mobile .open-menu .mid a {
+    font-size: 13px;
+}
+header .mobile .open-menu .mid > div > a {
+    color: #14b9cb;
+}
+header .mobile .open-menu .mid > a {
+    color: #fff;
+}
+header .mobile .open-menu .main .quick-menu .title a {
+    color: #aaa;
+}
+header .mobile .open-menu .inner .main .content .quick-menu .menu_list a {
+    color: #000;
+}
+header .mobile .open-menu .notice a {
+    color: #14b9cb;
+}
+header .mobile .open-menu .inner .main .content .all-menu a {
+    color: #000;
+}
+header .mobile .open-menu .main .btm .right a {
+    color: #aaa;
+}
+header .mobile .top-nav h1 > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/mb-logo-white_new.png) no-repeat center;
+    background-size: contain;
+}
+header .mobile .top-nav .inner > div > a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+header .mobile .top-nav .inner > div > a.alarm {
+    background: url(../img/ico-alarm.png) no-repeat center;
+    background-size: contain;
+}
+header .mobile .top-nav .inner > div > a.burger {
+    background: url(../img/ico-burger-w.png) no-repeat center;
+    background-size: contain;
+}
+header .mobile .btm-nav .gnb1 a {
+    background: url(../img/bnb-home-on.png) no-repeat 50% 25%;
+    background-size: 30px;
+}
+header .mobile .btm-nav .gnb1 a::after {
+    content: '홈';
+}
+header .mobile .btm-nav .gnb2 a {
+    background: url(../img/bnb-store_new.png) no-repeat 50% 25%;
+    background-size: 30px;
+}
+header .mobile .btm-nav .gnb2 a::after {
+    content: '스토어';
+}
+header .mobile .btm-nav .gnb3 a {
+    background: url(../img/bnb-reserve_new.png) no-repeat 50% 25%;
+    background-size: 30px;
+}
+header .mobile .btm-nav .gnb3 a::after {
+    content: '예매';
+}
+header .mobile .btm-nav .gnb4 a {
+    background: url(../img/bnb-event_new.png) no-repeat 50% 25%;
+    background-size: 30px;
+}
+header .mobile .btm-nav .gnb4 a::after {
+    content: '이벤트';
+}
+header .mobile .btm-nav .gnb5 a {
+    background: url(../img/bnb-mymega_new.png) no-repeat 50% 25%;
+    background-size: 30px;
+}
+header .mobile .btm-nav .gnb5 a::after {
+    content: 'MY';
+}
+
+/* 모바일에만 있는 탑 스몰 슬라이더 */
+.top-sm-slider .swiper .img-active a {
+    position: relative;
+}
+.top-sm-slider .swiper .img-active a::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    background: url(../img/slide-animated.png) no-repeat center;
+    background-size: contain;
+}
+.top-sm-slider .swiper a {
+    color: #fff;
+}
+.mb-contents .txt-slide .swiper-slide a {
+    line-height: 50px;
+    font-size: 15px;
+}
+.mb-contents .txt-slide a {
+    color: #aaa;
+}
