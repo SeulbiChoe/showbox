@@ -1,0 +1,15 @@
+body.nonScroll {
+    overflow: hidden;
+}
+
+.mb-nav-top.scroll {
+    background-color: #120d3c;
+}
+.gnb-active a {
+    color: #14b9cb;
+}
+
+/* jQuery로 slidetoggle 이용 */
+.mb-open-menu .btm .inner .menu > div {
+    display: none;
+}
